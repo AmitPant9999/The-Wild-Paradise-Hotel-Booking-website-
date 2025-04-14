@@ -13,13 +13,13 @@ export default async function Page() {
   const cabins = await getCabins();
 
   return (
-    <div className="grid grid-cols-5 gap-x-24 gap-y-32 text-lg items-center">
-      <div className="col-span-3">
-        <h1 className="text-4xl mb-10 text-accent-400 font-medium">
-          Welcome to The Wild paradise
+    <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-x-8 lg:gap-x-24 gap-y-16 lg:gap-y-32 text-lg items-center px-6 lg:px-16">
+      <div className="col-span-1 md:col-span-2 lg:col-span-3">
+        <h1 className="text-3xl sm:text-4xl mb-6 sm:mb-10 text-accent-400 font-medium">
+          Welcome to The Wild Paradise
         </h1>
 
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           <p>
             Where nature&apos;s beauty and comfortable living blend seamlessly.
             Hidden away in the heart of the Himalayan Dolomites, this is your
@@ -41,30 +41,31 @@ export default async function Page() {
         </div>
       </div>
 
-      <div className="col-span-2">
+      <div className="col-span-1 md:col-span-1 lg:col-span-2">
         <Image
           src={image1}
           alt="Family sitting around a fire pit in front of cabin"
           placeholder="blur"
           quality={80}
+          className="w-full h-auto rounded-lg"
         />
       </div>
 
-      <div className="relative aspect-square col-span-2">
+      <div className="relative aspect-square col-span-1 md:col-span-1 lg:col-span-2 mt-6 md:mt-0">
         <Image
-          src="/about-2.jpg"
+          src={image2}
           fill
-          className="object-cover"
+          className="object-cover rounded-lg"
           alt="Family that manages The Wild Oasis"
         />
       </div>
 
-      <div className="col-span-3">
-        <h1 className="text-4xl mb-10 text-accent-400 font-medium">
+      <div className="col-span-1 md:col-span-2 lg:col-span-3 mt-12 md:mt-0">
+        <h1 className="text-3xl sm:text-4xl mb-6 sm:mb-10 text-accent-400 font-medium">
           Managed by our family since 1962
         </h1>
 
-        <div className="space-y-8">
+        <div className="space-y-6 sm:space-y-8">
           <p>
             Since 1962, The Wild Paradise has been a cherished family-run retreat.
             Started by our grandparents, this haven has been nurtured with love
