@@ -12,10 +12,10 @@ function UpdateProfileForm({ guest, children }) {
   return (
     <form
       action={updateGuest}
-      className="bg-primary-900 py-8 px-12 text-lg flex gap-6 flex-col"
+      className="bg-primary-900 py-8 sm:py-10 px-6 sm:px-10 md:px-12 text-lg flex flex-col gap-6 sm:gap-8"
     >
       <div className="space-y-2">
-        <label>Full name</label>
+        <label className="text-sm sm:text-base">Full name</label>
         <input
           disabled
           defaultValue={fullName}
@@ -25,7 +25,7 @@ function UpdateProfileForm({ guest, children }) {
       </div>
 
       <div className="space-y-2">
-        <label>Email address</label>
+        <label className="text-sm sm:text-base">Email address</label>
         <input
           disabled
           defaultValue={email}
@@ -36,11 +36,13 @@ function UpdateProfileForm({ guest, children }) {
 
       <div className="space-y-2">
         <div className="flex items-center justify-between">
-          <label htmlFor="nationality">Where are you from?</label>
+          <label htmlFor="nationality" className="text-sm sm:text-base">
+            Where are you from?
+          </label>
           <img
             src={countryFlag}
             alt="Country flag"
-            className="h-5 rounded-sm"
+            className="h-5 sm:h-6 md:h-7 rounded-sm"
           />
         </div>
 
@@ -48,7 +50,9 @@ function UpdateProfileForm({ guest, children }) {
       </div>
 
       <div className="space-y-2">
-        <label htmlFor="nationalID">National ID number</label>
+        <label htmlFor="nationalID" className="text-sm sm:text-base">
+          National ID number
+        </label>
         <input
           defaultValue={nationalID}
           name="nationalID"
@@ -56,7 +60,7 @@ function UpdateProfileForm({ guest, children }) {
         />
       </div>
 
-      <div className="flex justify-end items-center gap-6">
+      <div className="flex justify-end items-center gap-4 sm:gap-6">
         <SubmitButton pendingLabel="Updating...">Update profile</SubmitButton>
       </div>
     </form>
